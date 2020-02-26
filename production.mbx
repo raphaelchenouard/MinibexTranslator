@@ -1,0 +1,23 @@
+Constants
+    N = 5; // Number of products
+    M = 4; //Number of machines
+    c[N] = (100;75;50;25;50);
+    d[M] = (500;800;700;900);
+    
+    t[M][N] = (
+            (4,0,2,0,4);
+            (2,3,0,0,3);
+            (3,0,1,4,0);
+            (0,5,4,2,0)
+            );
+Variables
+    x[N] in [0,1e3];
+
+Minimize -sum(i=0:N-1,x[i]*c[i]);
+    
+Constraints
+    for j=0:M-1;
+        sum(i=0:N-1, x[i]*t[j][i]) <= d[j];
+    end;
+    x[0] = x[0];
+End

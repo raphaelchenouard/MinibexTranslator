@@ -1,0 +1,4 @@
+Variables
+	x[2][2] in [-1,1];
+
+Minimize x(2,2)+x(1,1);
