@@ -9,3 +9,12 @@ Current supported languages are:
 - AMPL
 - GAMS
 
+
+## Usage
+
+Currently the makefile will generate several binaries:
+
+- ExprAMPL: basic tests the class that writes AMPL expressions
+- ExprGAMS: basic tests the class that writes GAMS expressions
+- Minibex2AMPL: it expects a minibex filename and generate a mod file
+- Minibex2GAMS: it expects a minibex filename and generate a gms file
