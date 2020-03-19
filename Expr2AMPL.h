@@ -39,6 +39,11 @@ protected:
         }
         (*os)<<"]";
     }
+    
+    void visit(const ExprConstant& e) {
+        //e.acceptVisitor(*this);
+        (*os) << e.get_value().mid();
+    }
 };
 
 #endif // end IBEX_EXPR_AMPL_H

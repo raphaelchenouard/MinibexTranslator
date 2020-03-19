@@ -39,6 +39,19 @@ protected:
         }
         (*os)<<"')";
     }
+    void visit(const ExprConstant& e) {
+        //e.acceptVisitor(*this);
+        (*os) << e.get_value().mid();
+    }
+    void visit(const ExprPower& e){
+        e.expr.acceptVisitor(*this);
+        (*os) << "**" << e.expon ;
+    }
+    void visit(const ExprSqr& e)   {
+        (*os) << "power(";
+        e.expr.acceptVisitor(*this);
+        (*os) << ",2)";
+    }
 };
 
 #endif // end IBEX_EXPR_GAMS_H

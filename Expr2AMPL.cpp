@@ -28,5 +28,6 @@ int main(int argc, char** argv){
     System sys2("test_mat2.mbx");
     printer.print(cout,sys2.goal->expr());
     cout<<endl<<endl<<sys2<<endl;
+
     return 0;
 }

@@ -79,19 +79,19 @@ bool system2gams(const System& sys, const char* fname){
             gams_var += to_string(indexed[i]);
             gams_var += ",jdx";
             gams_var += to_string(indexed[i]);
-            gams_var += ")\n";
+            gams_var += ")";
         }
         else if (sys.args[i].type()==Dim::ROW_VECTOR){
             gams_var += "jdx";
             gams_var += to_string(indexed[i]);
-            gams_var += ")\n";
+            gams_var += ")";
         }
         else if (sys.args[i].type()==Dim::COL_VECTOR){
             gams_var += "(idx";
             gams_var += to_string(indexed[i]);
-            gams_var += ")\n";
+            gams_var += ")";
         }
-        gams_str += gams_var;
+        gams_str += gams_var + "\n";
     }
     gams_str += "\tobj;\n";
     Expr2GAMS prt;
